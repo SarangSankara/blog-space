@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "ui-sans-serif", "system-ui";
+  --font-serif: "Merriweather", "Georgia", "ui-serif";
+}
