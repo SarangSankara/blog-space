@@ -18,12 +18,12 @@ const posts = await getCollection('blog');
 
     <section class="space-y-12">
       {posts.map((post) => (
-        <article class="pb-8 border-b border-gray-50 group">
+        <article class="max-w-2xl mx-auto px-6 py-20 w-full flex flex-col justify-center">
           <div class="text-xs text-gray-500 mb-2">
             <span class="font-medium text-gray-800">Sarang</span> · {post.data.pubDate}
           </div>
           
-          <a href={`/blog/${post.id}`} class="block">
+          <a href={`/blog-space/blog/${post.id}`} class="block">
             <h2 class="text-2xl font-bold font-sans text-gray-900 group-hover:text-gray-600 transition mb-2">
               {post.data.title}
             </h2>
