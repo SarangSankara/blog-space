@@ -16,24 +16,25 @@ const posts = await getCollection('blog');
       </p>
     </header>
 
-    <section class="space-y-12">
-      {posts.map((post) => (
-        <article class="max-w-2xl mx-auto px-6 py-20 w-full flex flex-col justify-center">
-          <div class="text-xs text-gray-500 mb-2">
-            <span class="font-medium text-gray-800">Sarang</span> · {post.data.pubDate}
-          </div>
-          
-          <a href={`/blog-space/blog/${post.id}`} class="block">
-            <h2 class="text-2xl font-bold font-sans text-gray-900 group-hover:text-gray-600 transition mb-2">
-              {post.data.title}
-            </h2>
-          </a>
-          
-          <p class="text-gray-500 font-serif line-clamp-2">
-            {post.data.description}
-          </p>
-        </article>
-      ))}
-    </section>
+    <section class="w-full space-y-6 text-left">
+        {posts.map((post) => (
+          <!-- Changed pb-8 to pb-4 to reduce individual bottom spacing -->
+          <article class="pb-4 border-b border-gray-50 group w-full">
+            <div class="text-xs text-gray-500 mb-2">
+              <span class="font-medium text-gray-800">Sarang</span> · {post.data.pubDate}
+            </div>
+            
+            <a href={`/blog-space/blog/${post.id}/`} class="block">
+              <h2 class="text-2xl font-bold font-sans text-gray-900 group-hover:text-gray-600 transition mb-2">
+                {post.data.title}
+              </h2>
+            </a>
+            
+            <p class="text-gray-500 font-serif line-clamp-2">
+              {post.data.description}
+            </p>
+          </article>
+        ))}
+      </section>
   </div>
 </BaseLayout>
